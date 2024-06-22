@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes Recommendation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Clothes Recommendation System</h1>
+        <form action="recommend.php" method="post">
+            <label for="season">Choose a season:</label>
+            <select name="season" id="season" required>
+                <option value="summer">Summer</option>
+                <option value="winter">Winter</option>
+                <option value="spring">Spring</option>
+                <option value="fall">Fall</option>
+            </select>
+
+            <label for="style">Choose a style:</label>
+            <select name="style" id="style" required>
+                <option value="casual">Casual</option>
+                <option value="formal">Formal</option>
+                <option value="sporty">Sporty</option>
+                <option value="business">Business</option>
+            </select>
+
+            <input type="submit" value="Get Recommendation">
+        </form>
+
+        <div id="recommendations">
+            <?php
+                // Include PHP logic to display recommendations
+                include 'recommend.php';
+            ?>
+        </div>
+    </div>
+</body>
+
+</html>
